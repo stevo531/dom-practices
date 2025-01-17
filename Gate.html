@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="Gate.js"></script> -->
+</head>
+<body>
+    <!-- In HTML, create a button with text ‘Click Me’ and keep track of how many times it is clicked, and with each click, add the number of times right under the button.
+
+Example:
+|Click Me|
+5
+4
+3
+2
+1 -->
+<button id="btn" onclick="count()">Click Me</button>
+<span id="number"></span>
+
+<script>
+    let b = document.getElementById('btn')
+    let a= document.getElementById('number')
+    let x = 1
+    function count(){
+        a.innerHTML += x
+        x++;
+    }
+</script>
+
+</body>
+</html>

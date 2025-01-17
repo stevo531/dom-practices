@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Grid Positioning</title>
+    <style>
+        /* Apply grid to a container */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
+            grid-template-rows: 100px 200px;   /* 2 rows with different heights */
+            gap: 10px;                         /* Optional: space between grid items */
+        }
+
+        /* Position the image */
+        .image-item {
+            grid-column: 2; /* Place the image in the second column */
+            grid-row: 1;    /* Place the image in the first row */
+        }
+
+        .other-item {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="other-item">Item 1</div>
+        <img src="your-image.jpg" alt="Image" class="image-item">
+        <div class="other-item">Item 2</div>
+    </div>
+</body>
+</html>

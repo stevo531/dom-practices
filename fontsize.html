@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increase Font Size</title>
+    <style>
+        #elementToToggle {
+            font-size: 20px; /* Initial font size */
+        }
+    </style>
+</head>
+<body>
+
+    <button id="fontsize">Increase Font Size</button>
+    
+    <!-- Element whose font size will change -->
+    <div id="elementToToggle">This text will increase in font size by 20px each time the button is clicked.</div>
+
+    <script>
+        let currentFontSize = 20;  // Initial font size in pixels
+        const element = document.getElementById('elementToToggle');
+        const fontSizeButton = document.getElementById('fontsize');
+
+        fontSizeButton.addEventListener('click', function() {
+            currentFontSize += 20;  // Increase the font size by 20px
+            element.style.fontSize = currentFontSize + 'px';  // Apply the new font size
+        });
+    </script>
+
+</body>
+</html>

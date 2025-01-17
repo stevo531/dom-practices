@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        #visbi{
+            border-top: 0   px;
+            
+        }
+        #fontsize{
+            font-size: 20px;
+        }
+    </style>
+    <body>
+        <button id="visbi" onclick="functions()">Visibility</button><br>
+        <br>
+        <button id="fontsize" onclick="sizes()">Increase font size</button>
+        <script>
+           
+const element= document.getElementById("visbi");
+
+function functions(){
+    element.style.display = "none"
+}
+var sizeIncrease = 20 ;
+   let bigSize = document.getElementById("fontsize");
+function sizes(){
+ sizeIncrease += 15 ;
+    bigSize.style.fontSize = sizeIncrease + 'px';}
+</script>
+</body>
+</head>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Events Example</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      border: 2px solid darkblue;
+      margin: 20px;
+      display: inline-block;
+      text-align: center;
+      line-height: 200px;
+      font-size: 18px;
+      font-family: Arial, sans-serif;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mouse Events Example</h1>
+
+  <!-- Elements to demonstrate mouse events -->
+  <div class="box" id="clickBox">Click Me</div>
+  <div class="box" id="dblclickBox">Double-Click Me</div>
+  <div class="box" id="mouseMoveBox">Move Mouse Here</div>
+  <div class="box" id="contextMenuBox">Right-Click Me</div>
+
+  <script>
+    // Click Event
+    const clickBox = document.getElementById('clickBox');
+    clickBox.addEventListener('click', () => {
+      alert('Box clicked!');
+    });
+
+    // Double Click Event
+    const dblclickBox = document.getElementById('dblclickBox');
+    dblclickBox.addEventListener('dblclick', () => {
+      alert('Box double-clicked!');
+    });
+
+    // Mouse Move Event
+    const mouseMoveBox = document.getElementById('mouseMoveBox');
+    mouseMoveBox.addEventListener('mousemove', (event) => {
+      event.preventDefault()
+      alert('mouse moved')
+    });
+
+    // Context Menu (Right-Click) Event
+    const contextMenuBox = document.getElementById('contextMenuBox');
+    contextMenuBox.addEventListener('contextmenu', (event) => {
+      event.preventDefault(); // Prevent default context menu
+      alert('Custom right-click action!');
+    });
+
+    // Mouse Over and Out (Demonstration)
+    contextMenuBox.addEventListener('mouseover', () => {
+      contextMenuBox.style.backgroundColor = 'lightgreen';
+      contextMenuBox.textContent = 'Mouse Over!';
+    });
+
+    contextMenuBox.addEventListener('mouseout', () => {
+      contextMenuBox.style.backgroundColor = 'lightblue';
+      contextMenuBox.textContent = 'Right-Click Me';
+    });
+  </script>
+</body>
+</html>

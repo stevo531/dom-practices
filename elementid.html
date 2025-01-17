@@ -1,0 +1,37 @@
+<!--Given the following HTML structure:
+
+```jsx
+<ul id="myList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+<button id="addItem">Add Item</button>
+<button class="removeItem">Remove Item</button>
+
+```
+
+Tasks: 
+
+- Add a new `<li>` at the beginning of the list with the text `"New Item"` to the list when the button `“Add Item”` is clicked.
+- Remove the last `<li>` in the list if the button `"Remove Item"` is clicked.
+-->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script src="changecolorrr.js" defer></script>
+        <ul id="myList">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li id="end">Item 3</li>
+        </ul>
+        <button id="addItem" onclick="addList()">Add Item</button>
+        <button class="removeItem" onclick="removeList()">Remove Item</button>
+        
+    </body>
+    </html>

@@ -1,0 +1,22 @@
+<!--Create a new <p> element with the text "Hello, World!"
+     and append it to a <div> with the class "container".-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create and append an element</title>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+    <script>
+        const element = document.createElement('p')
+        element.textContent= 'hello, world'
+        const containeracess = document.querySelector('.container')
+        containeracess.appendChild(element)
+    </script>
+</body>
+</html>
